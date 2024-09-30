@@ -1,0 +1,59 @@
+@media screen and (max-width: 550px){
+    .home-mobile {
+        flex-direction: column !important;
+        height: 100% !important;
+        background-color: transparent !important;
+    }
+    .sideBar {
+        display: none;
+    }
+    .m-flex-direction-column{
+        flex-direction: column !important;
+    }
+    .m-flex-direction-row {
+        flex-direction: row !important;
+    }
+   
+    .mw-100p-imp {
+        width: 100% !important;
+    }
+    .m-padding-imp {
+        padding: 10px !important;
+    }
+    .m-margin-imp {
+        margin: 10px !important;
+    }
+    .mh-100p{
+        height: 100% !important;
+    }
+    .mbg-white{
+        background-color: white !important;
+        
+    }
+    .md-none {
+        display: none !important;
+       
+    }
+    .color-blue {
+        color: #00355f !important;
+    }
+    .md-flex {
+        display: flex !important;
+    }
+    .m-subHeading{
+        font-size: 20px !important;
+        font-weight: 600 !important;
+    }
+    .m-BenefitBoxes {
+        width: 100% !important;
+        border: none !important;
+        display: flex !important;
+        gap: 10px !important;
+        flex-direction: row !important;
+        border-bottom: 1px solid #00355F !important;
+    }
+    .m-color-white{
+        color: white !important;
+    }
+    
+}

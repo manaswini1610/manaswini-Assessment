@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Column Layout</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+</head>
+<body>
+  <header class="pt-4 pb-2 px-md-2">
+    <div class="px-3 header-container d-flex justify-content-start align-items-center">
+      <img src="../assets/logo.png" alt="Logo" class="logo-img">
+      <div class="d-flex justify-content-between ms-2 ms-md-4 ms-lg-5 flex-grow-1">
+        <ul class="d-none d-md-flex mt-3 column-gap-4 text-capitalize list-unstyled justify-content-center align-items-center" id="head-nav" style="height: fit-content;">
+          <li><a href="#">Find Job Seaker</a></li>
+          <li class="active"><a href="#">For an employee</a></li>
+        </ul>
+        <ul class="d-flex flex-wrap flex-row align-items-center column-gap-2 column-gap-md-3 column-gap-lg-4 list-unstyled ms-auto">
+          <li class="bg-warning px-2 py-1 fw-semibold rounded-2 d-block d-md-none flex-grow-1">Try Premium</li>
+          <li class="d-none d-sm-flex align-items-center column-gap-1" style="color: rgba(0, 0, 0, 0.6); word-spacing: -1px;">
+            <i class="fas fa-phone"></i>
+            <span>+91 7670 800 000</span>
+          </li>
+          <li class="d-none d-sm-block vertical-line h-50"></li>
+          <li class="d-flex align-items-center column-gap-2" style="cursor: pointer;">
+            <i class="fa-regular fa-circle-user d-none d-sm-block"></i>
+            <a href="#" class="text-decoration-none fs-6" style="color: black;">Sign In</a>
+            <i class="fa-solid fa-bars d-block d-sm-none fs-5"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- for mobile screen -->
+    <ul class="mobile-head-nav d-flex d-md-none justify-content-center align-items-center text-capitalize column-gap-2 list-unstyled text-center mx-auto" style="background-color: rgba(211, 211, 211, 0.3);" id="head-nav2">
+      <li><a href="#">Find Job Seaker</a></li>
+      <li class="active"><a href="#">For an employee</a></li>
+    </ul>
+  </header>
+
+
+  
+
+  <div class="d-flex justify-content-center align-items-center w-100 p-0  " style="background-color: #00355f; position: relative;">
+    <div class="d-flex w-100 home-mobile m-margin-imp" style="background-color: white; height:375px; margin: 102px 120px; padding: 32px; gap: 20px;">
+      <div class="mw-100p-imp" style="width: 50%">
+        <img src="https://www.y-axis.com/assets/cms/2023-09/Join%20the%20best%20team.webp" style="height: 100%; width: 100%;"/>
+      </div>
+      <div class="d-flex flex-column mw-100p-imp" style="width: 589px; height: 279px;">
+        <div >
+          <h2 class="mw-100p-imp m-color-white" style="font-size: 30px; font-weight: 700; width: 477px; height: 106px; color: #00355F;">Y-Axis Jobsite-Premium Membership</h2>
+        </div>
+        <div >
+          <p class="para1 m-color-white">Become a Y-Axis Premium Member to enhance your overseas job search with priority visibility, unlimited applications, and direct contact with employers.</p>
+        </div>
+        <div style="position: relative; width: fit-content;">
+          <p class="para2  color-blue mbg-white" style="background-color: #00355F; width: fit-content; padding: 15px; color: white;">Buy Now (Rs. 5,000)</p>
+          <p style="width: 6px; height: 30px; background: #E44126; position: absolute; top: 16px;right: -3px;"></p>
+        </div>
+      </div>
+    </div>
+    <p style="width: 10px; height: 150px; background-color: #E44126; position:absolute;right: 115px; " class="sideBar"></p>
+  </div>
+
+  <div class="container mt-5 md-none">
+    <div class="row box-container">
+      <div class="col box cursor-pointer" onclick="scrollToSection('dbenefits', this)">Benefits</div>
+      <div class="col box cursor-pointer" onclick="scrollToSection('ddeliverables', this)">Deliverables</div>
+      <div class="col box cursor-pointer" onclick="scrollToSection('dhow-it-works', this)">How does it work?</div>
+      <div class="col box cursor-pointer" onclick="scrollToSection('dtestimonials', this)">Testimonials</div>
+      <div class="col box cursor-pointer" onclick="scrollToSection('dbuy-membership', this)">Buy Membership</div>
+    </div>
+  </div>
+  <div class="md-flex" style="display: none; flex-direction: column; justify-content: space-between; width: 100%;">
+    <div class=" mobile-box-container margin-90" style="display: flex; flex-direction: column;">
+      <div class="m-borderColor" onclick="toggleContent('benefits')">
+        <div class="mBox">
+          <p>Benefits</p><img src="../assets/downArrow.svg" alt="downArrow"/>
+        </div>
+        <div id="benefits" class="flex-column w-100 m-padding-imp" style="padding: 102px 120px; gap: 10px; display: none;">
+          <b class="sub-heading m-subHeading">OverView&Benefits</b>
+          <p>From visibility to direct contact, become a premium member and enjoy extensive benefits that aid you in finding a job abroad. The Y-Axis Premium Membership enhances your overseas job search by providing you with priority visibility, unlimited applications, and direct contact opportunities with employers.</p>
+          <div class="d-flex justify-content-center m-flex-direction-column" style="gap: 10px;">
+            <div class="BenefitBoxes m-BenefitBoxes">
+              <div  style="position: relative; width: fit-content;">
+                <img src="../assets/b1.svg"/>
+                <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right:0px;"></p>
+              </div>
+              <div>
+                <p class="benefitP">Benefit 1</p>
+                <p> <strong> Job Search Efficiency</strong> <br> Maximize your job search efficiency  with priority visibility and direct contact opportunities.</p>
+              </div>
+            </div>
+            <div class="BenefitBoxes m-BenefitBoxes">
+              <div style="position: relative;">
+                <img src="../assets/b2.svg"/>
+                <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right:0px "></p>
+              </div>
+              <div>
+                <p class="benefitP">Benefit 2</p>
+                <p><strong>Unlimited Applications</strong> <br> Apply to unlimited job positions, enhancing your chances of securing employment abroad.</p>
+              </div>
+            </div>
+            <div class="BenefitBoxes m-BenefitBoxes">
+              <div style="position: relative;">
+                <img src="../assets/b3.svg"/>
+                <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 0px; "></p>
+              </div>
+              <div>
+                <p class="benefitP">Benefit 3</p>
+                <p><strong>Higher Employer Engagement</strong> <br>Stand out to employers with a Premium profile and higher visibility in searches.</p>
+              </div>
+            </div>
+            <div class="BenefitBoxes m-BenefitBoxes">
+              <div style="position: relative;">
+                <img src="../assets/b4.svg"/>
+                <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 0px; "></p>
+              </div>
+              <div>
+                <p class="benefitP">Benefit 4</p>
+                <p><strong>Comprehensive Job Search Management</strong> <br> Manage all your job search activities and services from one account.</p>
+              </div>
+            </div>
+            <div class="BenefitBoxes m-BenefitBoxes">
+              <div style="position: relative;">
+                <img src="../assets/b5.svg"/>
+                <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 0px; "></p>
+              </div>
+              <div>
+                <p class="benefitP">Benefit 5</p>
+                <p><strong>Cost-Effective</strong> <br> Solution Enjoy extensive benefits and features for 1 year with a single membership purchase.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div   class="m-borderColor" onclick="toggleContent('deliverables')">
+        <div class=" mBox ">
+          <p>Deliverables</p> <img src="../assets/downArrow.svg" alt="downArrow"/>
+        </div>
+        <div id="deliverables" class="delivary-container m-margin-imp m-flex-direction-column" style="margin: 10px 110px 0px 110px; display: none;">
+        
+          <div class="delivary-points">
+            
+              <div class="points mw-100p-imp">
+                <li style="font-weight: bold;">One-Year Validity:</li>
+                <p>Premium membership benefits are available for a full year, providing extended access to all premium features.</p>
+              </div>
+            
+           
+              <div class="points mw-100p-imp">
+                <li style="font-weight: bold;">Apply to Jobs in 11 Countries:</li>
+                <p>Members can apply to job opportunities in 11 different countries, broadening their international job search.</p>
+              </div>
+           
+         
+              <div class="points mw-100p-imp">
+                <li style="font-weight: bold;">Unlimited Job Applications:</li>
+                <p >There are no limits on the number of job applications members can submit, maximizing their job search potential.</p>
+              </div>
+           
+            
+              <div class="points mw-100p-imp">
+                <li style="font-weight:bold;">Priority Display and Direct Employer Contact:</li>
+                <p>Premium members receive priority display in employer searches and their contact details are visible, enabling direct contact from employers.</p>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="m-borderColor" onclick="toggleContent('how-it-works')">
+        <div class=" mBox " >
+          <p>How does it work? </p><img src="../assets/downArrow.svg" alt="downArrow"/>
+        </div>
+        <div id="how-it-works" class="flex-column w-100 m-margin-imp m-padding-imp" style="background-color: #00355f; padding: 102px 120px; margin-top:50px; display: none;">
+
+          <div class="d-flex flex-wrap " style="gap: 70px;">
+            <div class="process d-flex mb-4" style="width: 331px;">
+              <div class="me-3">
+                <img src="../assets/1.svg" alt="Step 1" />
+              </div>
+              <div class="textContainer">
+                <p>1. Purchase Membership</p>
+                <p>from the Y-Axis platform.</p>
+              </div>
+            </div>
+          
+            <div class="process d-flex mb-4" style="width: 331px;">
+              <div class="me-3">
+                <img src="../assets/2.svg" alt="Step 2" />
+              </div>
+              <div class="textContainer">
+                <p>2. Profile Setup</p>
+                <p>Set up and optimize your profile to display as "Premium" on the Jobsite.</p>
+              </div>
+            </div>
+          
+            <div class="process d-flex mb-4" style="width: 331px;">
+              <div class="me-3">
+                <img src="../assets/bag.svg" alt="Step 3" />
+              </div>
+              <div class="textContainer">
+                <p>3. Access Jobs</p>
+                <p>Gain access to active overseas job postings and add desired positions to your Wishlist.</p>
+              </div>
+            </div>
+          
+            <div class="process d-flex mb-4" style="width: 331px;">
+              <div class="me-3">
+                <img src="../assets/person.svg" alt="Step 4" />
+              </div>
+              <div class="textContainer">
+                <p>4. Apply to Jobs</p>
+                <p>Apply to unlimited job positions directly from your 'My Wishlist' page.</p>
+              </div>
+            </div>
+          
+            <div class="process d-flex mb-4" style="width: 331px;">
+              <div class="me-3">
+                <img src="../assets/setting.svg" alt="Step 5" />
+              </div>
+              <div class="textContainer">
+                <p>5. Direct Employer Contact</p>
+                <p>Employers may contact you directly for job opportunities.</p>
+              </div>
+            </div>
+          
+            <div class="process d-flex mb-4" style="width: 331px;">
+              <div class="me-3">
+                <img src="../assets/person.svg" alt="Step 6" />
+              </div>
+              <div class="textContainer">
+                <p>6. Manage Services</p>
+                <p>Use Our Services in your Y-Jobs account to purchase and manage additional job search services.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="m-borderColor" onclick="toggleContent('testimonials')">
+        <div class=" mBox ">
+          <p>Testimonials</p> <img src="../assets/downArrow.svg" alt="downArrow"/>
+        </div>
+        <div id="testimonials" class="testimonial-container m-flex-direction-column m-margin-imp" style="margin: 60px 110px; display: none;">
+      
+      
+          <div class="test-boxes m-flex-direction-column">
+      
+            <div class="testimonial-box mw-100p-imp">
+              <div class="tests-img">
+                <img src="../assets/main.jpg" alt="img">
+      
+              </div>
+              <div class="test-para">
+                <p>My consultant was very patient and helped me with all my documents.</p>
+                <p>-Tejeswar Rao</p>
+                <p style="width: 60px; height:6px; background-color:red ;position:absolute;bottom:-18px;right:90px"></p>
+              </div>
+      
+            </div>
+      
+            <div class="testimonial-box mw-100p-imp">
+      
+              <div class="tests-img">
+                <img src="../assets/main.jpg" alt="img">
+      
+              </div>
+      
+              <div class="test-para">
+                <p>My consultant was very patient and helped me with all my documents.</p>
+                <p>-Tejeswar Rao</p>
+                <p style="width: 60px; height:6px; background-color:red ;position:absolute;bottom:-18px;right:90px"></p>
+      
+              </div>
+      
+      
+            </div>
+      
+            <div class="testimonial-box mw-100p-imp">
+              <div class="tests-img">
+                <img src="../assets/main.jpg" alt="img">
+      
+              </div>
+              <div class="test-para">
+                <p>My consultant was very patient and helped me with all my documents.</p>
+                <p>-Tejeswar Rao</p>
+                <p style="width: 60px; height:6px; background-color:red ;position:absolute;bottom:-18px;right:90px"></p>
+      
+              </div>
+      
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="m-borderColor" onclick="toggleContent('buy-membership')">
+        <div class=" mBox ">
+          <p>Buy Membership</p> <img src="../assets/downArrow.svg" alt="downArrow"/>
+        </div>
+        <div id="buy-membership" class="justify-content-center align-items-center w-100 p-0  " style="background-color: #00355f; position: relative; display: none;">
+          <div class="d-flex w-100 home-mobile m-margin-imp" style="background-color: white; height:375px; margin: 102px 120px; padding: 32px; gap: 20px;">
+            <div class="d-flex" style="background-color: #FCC419; width: 100%; height: 50px; justify-content: space-around; align-items: center;">
+              <strong class="margin-0" style="color: #00355F; font-size: 20px;">25% OFF</strong>
+              <div style="position: relative;">
+                <strong class="margin-0" style="color: #00355F;">RS 7449/-</strong>
+                <p class="margin-0" style="width: 70px; height: 2px; background-color: #E44126; position: absolute; top: 10px;"></p>
+              </div>
+              <strong class="margin-0" style="color: #00355F;">RS 5000/-</strong>
+            </div>
+            <div class="mw-100p-imp" style="width: 50%">
+              <img src="https://www.y-axis.com/assets/cms/2023-09/Join%20the%20best%20team.webp" style="height: 100%; width: 100%;"/>
+            </div>
+            <div class="d-flex flex-column mw-100p-imp" style="width: 589px; height: 279px;">
+              <div >
+                <h2 class="mw-100p-imp m-color-white" style="font-size: 30px; font-weight: 700; width: 477px; height: 106px; color: #00355F;">Y-Axis Jobsite-Premium Membership</h2>
+              </div>
+              <div >
+                <p class="para1 m-color-white">Become a Y-Axis Premium Member to enhance your overseas job search with priority visibility, unlimited applications, and direct contact with employers.</p>
+              </div>
+              <div style="position: relative; width: fit-content;">
+                <p class="para2  color-blue mbg-white" style="background-color: #00355F; width: fit-content; padding: 15px; color: white;">Buy Now (Rs. 5,000)</p>
+                <p style="width: 6px; height: 30px; background: #E44126; position: absolute; top: 16px;right: -3px;"></p>
+              </div>
+            </div>
+          </div>
+          <p style="width: 10px; height: 150px; background-color: #E44126; position:absolute;right: 115px; " class="sideBar"></p>
+        </div>
+      </div>
+    </div>
+  </div>        
+  
+  
+  
+  <div class="overview-section md-none" style="margin:50px 110px 0px 110px">
+    <div class="overview-heading">
+      <b class="sub-heading">Overview</b>
+
+    </div>
+    <div class="para">
+      <p>From visibility to direct contact, become a premium member and enjoy extensive benefits that aid you in finding a job abroad. The Y-Axis Premium Membership enhances your overseas job search by providing you with priority visibility, unlimited applications, and direct contact opportunities with employers.</p>
+    </div>
+  </div>
+  
+
+  
+  <div id="dbenefits" class=" md-none  flex-column w-100 " style="padding: 102px 120px; gap: 10px;">
+    <b class="sub-heading">Benefits</b>
+    <div class="d-flex justify-content-center" style="gap: 10px;">
+      <div class="BenefitBoxes">
+        <div  style="position: relative;">
+          <img src="../assets/b1.svg"/>
+          <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 178px;"></p>
+        </div>
+        <div>
+          <p class="benefitP">Benefit 1</p>
+          <p> <strong> Job Search Efficiency</strong> <br> Maximize your job search efficiency  with priority visibility and direct contact opportunities.</p>
+        </div>
+      </div>
+      <div class="BenefitBoxes">
+        <div style="position: relative;">
+          <img src="../assets/b2.svg"/>
+          <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 178px; "></p>
+        </div>
+        <div>
+          <p class="benefitP">Benefit 2</p>
+          <p><strong>Unlimited Applications</strong> <br> Apply to unlimited job positions, enhancing your chances of securing employment abroad.</p>
+        </div>
+      </div>
+      <div class="BenefitBoxes">
+        <div style="position: relative;">
+          <img src="../assets/b3.svg"/>
+          <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 178px; "></p>
+        </div>
+        <div>
+          <p class="benefitP">Benefit 3</p>
+          <p><strong>Higher Employer Engagement</strong> <br>Stand out to employers with a Premium profile and higher visibility in searches.</p>
+        </div>
+      </div>
+      <div class="BenefitBoxes">
+        <div style="position: relative;">
+          <img src="../assets/b4.svg"/>
+          <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 178px; "></p>
+        </div>
+        <div>
+          <p class="benefitP">Benefit 4</p>
+          <p><strong>Comprehensive Job Search Management</strong> <br> Manage all your job search activities and services from one account.</p>
+        </div>
+      </div>
+      <div class="BenefitBoxes">
+        <div style="position: relative;">
+          <img src="../assets/b5.svg"/>
+          <p style="width: 20px; height:5px; position: absolute; background: #E44126; top: 22px; right: 178px; "></p>
+        </div>
+        <div>
+          <p class="benefitP">Benefit 5</p>
+          <p><strong>Cost-Effective</strong> <br> Solution Enjoy extensive benefits and features for 1 year with a single membership purchase.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<div id="ddeliverables" class=" md-none delivary-container" style="margin: 10px 110px 0px 110px;">
+    <div class="delivary-heading">
+      <b class="sub-heading">Deliverables</b>
+    </div>
+    <div class="delivary-points">
+      
+        <div class="points">
+          <p style="font-weight: bold;">One-Year Validity:</p>
+          <p>Premium membership benefits are available for a full year, providing extended access to all premium features.</p>
+        </div>
+      
+     
+        <div class="points">
+          <p style="font-weight: bold;">Apply to Jobs in 11 Countries:</p>
+          <p>Members can apply to job opportunities in 11 different countries, broadening their international job search.</p>
+        </div>
+     
+   
+        <div class="points">
+          <p style="font-weight: bold;">Unlimited Job Applications:</p>
+          <p >There are no limits on the number of job applications members can submit, maximizing their job search potential.</p>
+        </div>
+     
+      
+        <div class="points">
+          <p style="font-weight:bold;">Priority Display and Direct Employer Contact:</p>
+          <p>Premium members receive priority display in employer searches and their contact details are visible, enabling direct contact from employers.</p>
+        </div>
+      
+    </div>
+  </div>
+  
+
+
+
+  
+  <div id="dhow-it-works" class=" md-none  flex-column w-100 " style="background-color: #00355f; padding: 102px 120px; margin-top:50px ;">
+    <div style="color: white; margin-bottom: 40px;">
+      <b >How does it work?</b>
+    </div>
+    <div class="d-flex flex-wrap " style="gap: 70px;">
+      <div class="process d-flex mb-4" style="width: 331px;">
+        <div class="me-3">
+          <img src="../assets/1.svg" alt="Step 1" />
+        </div>
+        <div class="textContainer">
+          <p>1. Purchase Membership</p>
+          <p>from the Y-Axis platform.</p>
+        </div>
+      </div>
+    
+      <div class="process d-flex mb-4" style="width: 331px;">
+        <div class="me-3">
+          <img src="../assets/2.svg" alt="Step 2" />
+        </div>
+        <div class="textContainer">
+          <p>2. Profile Setup</p>
+          <p>Set up and optimize your profile to display as "Premium" on the Jobsite.</p>
+        </div>
+      </div>
+    
+      <div class="process d-flex mb-4" style="width: 331px;">
+        <div class="me-3">
+          <img src="../assets/bag.svg" alt="Step 3" />
+        </div>
+        <div class="textContainer">
+          <p>3. Access Jobs</p>
+          <p>Gain access to active overseas job postings and add desired positions to your Wishlist.</p>
+        </div>
+      </div>
+    
+      <div class="process d-flex mb-4" style="width: 331px;">
+        <div class="me-3">
+          <img src="../assets/person.svg" alt="Step 4" />
+        </div>
+        <div class="textContainer">
+          <p>4. Apply to Jobs</p>
+          <p>Apply to unlimited job positions directly from your 'My Wishlist' page.</p>
+        </div>
+      </div>
+    
+      <div class="process d-flex mb-4" style="width: 331px;">
+        <div class="me-3">
+          <img src="../assets/setting.svg" alt="Step 5" />
+        </div>
+        <div class="textContainer">
+          <p>5. Direct Employer Contact</p>
+          <p>Employers may contact you directly for job opportunities.</p>
+        </div>
+      </div>
+    
+      <div class="process d-flex mb-4" style="width: 331px;">
+        <div class="me-3">
+          <img src="../assets/person.svg" alt="Step 6" />
+        </div>
+        <div class="textContainer">
+          <p>6. Manage Services</p>
+          <p>Use Our Services in your Y-Jobs account to purchase and manage additional job search services.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div id="dtestimonials" class=" md-none testimonial-container" style="margin: 60px 110px;">
+    <div class="test-heading">
+      <b class="sub-heading">Testimonials</b>
+    </div>
+
+    <div class="test-boxes">
+
+      <div class="testimonial-box">
+        <div class="tests-img">
+          <img src="../assets/main.jpg" alt="img">
+
+        </div>
+        <div class="test-para">
+          <p>My consultant was very patient and helped me with all my documents.</p>
+          <p>-Tejeswar Rao</p>
+          <p style="width: 60px; height:6px; background-color:red ;position:absolute;bottom:-18px;right:90px"></p>
+        </div>
+
+      </div>
+
+      <div class="testimonial-box">
+
+        <div class="tests-img">
+          <img src="../assets/main.jpg" alt="img">
+
+        </div>
+
+        <div class="test-para">
+          <p>My consultant was very patient and helped me with all my documents.</p>
+          <p>-Tejeswar Rao</p>
+          <p style="width: 60px; height:6px; background-color:red ;position:absolute;bottom:-18px;right:90px"></p>
+
+        </div>
+
+
+      </div>
+
+      <div class="testimonial-box">
+        <div class="tests-img">
+          <img src="../assets/main.jpg" alt="img">
+
+        </div>
+        <div class="test-para">
+          <p>My consultant was very patient and helped me with all my documents.</p>
+          <p>-Tejeswar Rao</p>
+          <p style="width: 60px; height:6px; background-color:red ;position:absolute;bottom:-18px;right:90px"></p>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div id="dbuy-membership" class=" md-none  flex-column w-100 " style="padding:0px 120px; gap: 10px;">
+    <div class="buy-membership d-flex" style="border: 1px solid #00355F; height: 380px;">
+      <div class="d-flex flex-column justify-content-center " style="width: 60%; padding: 0px 50px;">
+        <h1 style="color: #00355F; font-weight: bold;">Y-Axis Jobsite-Premium Membership</h1>
+        <p style="color: #00355F;">Become a Y-Axis Premium Member to enhance your overseas job search with priority visibility, unlimited applications, and direct contact with employers.</p>
+      </div>
+      <div class="d-flex flex-column justify-content-center sale" style="width:45%;background-color: #00355F; padding:80px; position: relative;">
+        <p>Take control of your overseas job search now Original Price: Rs 7499 <br> Promotional Offer: <strong> 4999/- </strong>only</p>
+        <div style="position: relative; width: fit-content;">
+        <p style="background-color: #FCC419; width:fit-content;padding: 10px 30px; color:#00355F;">Become a Premium Member</p>
+        <p style="position: absolute; width: 7px; height: 30px;background-color: #E44126; top: 8px;right: -4px;"></p>
+      </div>
+        <p style="padding-left: 140px;">Excluding GST*</p>
+      </div>
+    </div>
+  </div>
+
+<div class="d-flex flex-column" style="padding: 102px 120px; gap: 10px;">
+  <b class="sub-heading">Desclaimer</b>
+  <div class="d-flex flex-column listIcon" style="gap: 10px;">
+  <li>Do not equate this to legal advice.</li>
+  <li>All recommendation is based on info you provided.</li>
+  <li>All advice is based on information available at that time and is bound to change.</li>
+  <li>More accurate information will be available only after an evaluation report.</li>
+  <li>We make no claim to have access to any visa office or guarantee any job or visa.</li>
+  <li>They are in the hands of authorities beyond our control.</li>
+  <li>This overrides any oral promises made by our consultant.</li>
+  <li> We refer and honor only the written and signed agreement between us.</li>
+</div>
+</div>
+  
+<footer class="px-3">
+  <div class="footer-container d-flex flex-wrap justify-content-between flex-wrap column-gap-5">
+      <div class="footer-new d-flex flex-wrap flex-grow-1 justify-content-between">
+        <div class="footer-section">
+          <h3 class="fw-bold footer-accordion">ABOUT US <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
+          <ul class="fw-medium">
+            <li style="line-height: 15px;"><a href="#">About Y Axis</a></li>
+            <li style="line-height: 15px;"><a href="#">Careers</a></li>
+            <li style="line-height: 15px;"><a href="#">CSR</a></li>
+            <li style="line-height: 15px;"><a href="#">Office Network</a></li>
+            <li style="line-height: 15px;"><a href="#">Press and News</a></li>
+          </ul>
+        </div>
+        <hr class="d-block d-sm-none">
+        <div class="footer-section">
+          <h3 class="fw-bold footer-accordion">TESTIMONIALS <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
+          <ul class="fw-medium">
+            <li style="line-height: 15px;" ><a href="#">Success Videos</a></li>
+            <li style="line-height: 15px;" ><a href="#">Customer Reviews</a></li>
+            <li style="line-height: 15px;" ><a href="#">Social Reviews</a></li>
+            <li style="line-height: 15px;" ><a href="#">Our Success</a></li>
+          </ul>
+        </div>
+        <hr class="d-block d-sm-none">
+        <div class="footer-section">
+          <h3 class="fw-bold footer-accordion">BLOGS <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
+          <ul class="fw-medium">
+            <li style="line-height: 15px;" ><a href="#">Immigration News</a></li>
+            <li style="line-height: 15px;" ><a href="#">Immigration Blog</a></li>
+            <li style="line-height: 15px;" ><a href="#">Overseas Jobs</a></li>
+            <li style="line-height: 15px;" ><a href="#">Visa Stories</a></li>
+          </ul>
+        </div>
+        <hr class="d-block d-sm-none">
+        <div class="footer-section">
+          <h3 class="fw-bold footer-accordion">INDIAN LANGUAGES <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
+          <ul class="fw-medium">
+            <li style="line-height: 15px;" ><a href="#">Hindi</a></li>
+            <li style="line-height: 15px;" ><a href="#">Tamil</a></li>
+            <li style="line-height: 15px;" ><a href="#">Gujarat</a></li>
+            <li style="line-height: 15px;" ><a href="#">Telugu</a></li>
+            <li style="line-height: 15px;" ><a href="#">Marathi</a></li>
+            <li style="line-height: 15px;" ><a href="#">Kannada</a></li>
+          </ul>
+        </div>
+        <hr class="d-block d-sm-none">
+        <div class="footer-section">
+          <h3 class="fw-bold footer-accordion" style="white-space: nowrap;">FOREIGN LANGUAGES <i class="fa-solid fa-chevron-down d-inline-block d-sm-none"></i></h3>
+          <ul class="fw-medium">
+            <li style="line-height: 15px;" ><a href="#">Arabic</a></li>
+            <li style="line-height: 15px;" ><a href="#">French</a></li>
+            <li style="line-height: 15px;" ><a href="#">Chinese</a></li>
+            <li style="line-height: 15px;" ><a href="#">German</a></li>
+            <li style="line-height: 15px;" ><a href="#">Korean</a></li>
+            <li style="line-height: 15px;" ><a href="#">Ukrainian</a></li>
+            <li style="line-height: 15px;" ><a href="#">Italian</a></li>
+          </ul>
+        </div>
+        <hr class="d-block d-sm-none">
+      </div>
+      <div class="footer-sections">
+        <div>
+          <h3 class="fw-bold fs-6 mb-3">SUBSCRIBE TO OUR NEWSLETTER</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit" class="subscribe-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-5 d-flex flex-wrap justify-content-between flex-wrap column-gap-5">
+        <div class="footer-middle flex-grow-1">
+          <h3 class="fw-bold">CONTACT US</h3><br>
+          <div class="d-flex flex-wrap gap-2 justify-content-between flex-grow-1">
+            <div class="country-contact">
+              <img src="../assets/india.webp" style="transform: translate(0px, -5px);" alt="India Flag">
+              <div class="contact-info">
+                <strong class="mb-3">INDIA</strong>
+                <p style="line-height: 7px;">+91 7670 80 000</p>
+                <p style="line-height: 7px;">info@y-axis.com</p>
+                <p style="line-height: 7px;">www.y-axis.com</p>                  
+              </div>
+            </div>
+            <div class="country-contact">
+              <img src="../assets/australia.webp" style="transform: translate(0px, -5px);" alt="Australia Flag">
+              <div class="contact-info">
+                <strong class="mb-3" >AUSTRALIA</strong>
+                <p style="line-height: 7px;" >+61 399394818</p>
+                <p style="line-height: 7px;" >Australia@y-axis.com.au</p>
+                <p style="line-height: 7px;" >www.y-axis.com.au</p>
+              </div>
+            </div>
+            <div class="country-contact">
+              <img src="../assets/uae.webp" style="transform: translate(0px, -5px);" alt="UAE Flag">
+              <div class="contact-info">
+                <strong class="mb-3" >UAE</strong>
+                <p style="line-height: 7px;" >+971 042839000</p>
+                <p style="line-height: 7px;" >dubai@y-axis.ae</p>
+                <p style="line-height: 7px;" >www.y-axis.ae</p>
+              </div>
+            </div>
+            <div class="country-contact">
+              <img src="../assets/uk.webp" style="transform: translate(0px, -5px);" alt="UK Flag">
+              <div class="contact-info">
+                <strong class="mb-3" >UK</strong>
+                <p style="line-height: 7px;" >+44 1263226009</p>
+                <p style="line-height: 7px;" >info@y-axis.co.uk</p>
+                <p style="line-height: 7px;" >www.y-axis.uk</p>
+              </div>
+            </div>
+            <div class="country-contact">
+              <img src="../assets/canada.webp" style="transform: translate(0px, -5px);" alt="Canada Flag">
+              <div class="contact-info">
+                <strong class="mb-3" >CANADA</strong>
+                <p style="line-height: 7px;" >+1 236 243 2213</p>
+                <p style="line-height: 7px;" >info@y-axis.ca</p>
+                <p style="line-height: 7px;" >www.y-axis.ca</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social-media">
+          <h3 class="fw-bold mb-3">FOLLOW US</h3>
+          <div class="social-icons h-75">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+    <ul class="footer-links">
+      <li><a href="#">Refund Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Anti Fraud Policy</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Sitemap</a></li>
+    </ul>
+    <p class="copyright">&copy; 2023 Y-Axis. All rights reserved.</p>
+  </div>
+</footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./scripts/dataset.js"></script>
+<script src="../scripts/index.js"></script>
+  
+
+</body>
+</html>
